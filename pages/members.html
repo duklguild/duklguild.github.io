@@ -1,105 +1,496 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
 <title>DUKL Homepage</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <style>
+
+/* Button Style */
+
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+}
+    
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+.kave-btn {
+  position: relative;
+  border: solid 1px rgba(0,214,252,0.3);
+  background: none;
+  color: rgba(0,214,252,0.5);
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 1.8px;
+  width: 23%;
+  height: 70px;
+  padding: 0;
+  transition: all 0.25s ease;
+  outline: none;
+}
+.kave-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 60px;
+  height: 1px;
+  transform: translateY(-1px);
+  background: #00d6fc;
+  transition: all 0.25s ease;
+}
+.kave-btn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  width: 60px;
+  height: 1px;
+  transform: translateY(1px);
+  background: #00d6fc;
+  transition: all 0.25s ease;
+}
+.kave-btn:hover {
+  box-shadow: 1px 1px 8px rgba(0,214,252,0.3);
+  color: #00d6fc;
+  text-shadow: 0 0 8px rgba(0,214,252,0.4);
+}
+.kave-btn:hover.kave-btn:before {
+  left: 0;
+  width: 20px;
+}
+.kave-btn:hover.kave-btn:after {
+  right: 0;
+  width: 20px;
+}
+.kave-btn:hover .kave-line:before {
+  bottom: 0;
+}
+.kave-btn:hover .kave-line:after {
+  top: 0;
+}
+.kave-line:before {
+  content: "";
+  position: absolute;
+  bottom: 30%;
+  right: 0;
+  width: 1px;
+  height: 20px;
+  transform: translateX(1px);
+  background: #00d6fc;
+  transition: all 0.25s ease;
+}
+.kave-line:after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 1px;
+  height: 20px;
+  transform: translateX(-1px);
+  background: #00d6fc;
+  transition: all 0.25s ease;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+/* Personal Style */
+
+.default {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/ate.jpg");
+  min-height: 75%;
 }
 
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
+.elvenar {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/elvenar.jpg");
+  min-height: 100%;
 }
 
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.high {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/high.jpg");
+  min-height: 100%;
 }
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.sushi {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/sushi.jpg");
+  min-height: 100%;
 }
 
-/* Style the content */
-.content {
-  background-color: #ddd;
-  padding: 10px;
-  height: 200px; /* Should be removed. Only for demonstration */
+.roll {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/roll.jpg");
+  min-height: 100%;
 }
 
-/* Style the footer */
-.footer {
-  background-color: #f1f1f1;
-  padding: 10px;
+.bail {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/bail.jpg");
+  min-height: 100%;
 }
 
-html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+.rennn {
+  background-position: center;
+  background-size: cover;
+  background-image: url("../images/rennn.jpg");
+  min-height: 100%;
+}
 
+.menu {
+  display: none;
+}
+
+.background-spec {
+    background-color: rgb(108, 121, 121);
+}
 </style>
-</head>
-<body class="w3-theme-l5">
+<body style=" background-color: rgb(108, 121, 121);">
 
-<!-- Navbar -->
+<!-- Links (sit on top) -->
 <div class="w3-top">
-    <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
-        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-group  w3-margin-right"></i>Members</a>
-        <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Home"><i class="fa fa-home"></i></a>
-        <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="About"><i class="fa fa-cubes"></i></a>
-        <a href="news.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="News"><i class="fa fa-newspaper-o"></i></a>
-        <a href="games.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Active Games"><i class="fa fa-gamepad"></i></a>
-        <a href="events.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Events"><i class="fa fa-bullhorn"></i></a>
-        <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Contact Us"><i class="fa fa-address-book"></i></a>
-        <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-            <img src="/w3images/avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
-        </a>
-        <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
-        <div class="w3-dropdown-hover w3-hide-small w3-right" >
-            <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>     
-            <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
-                <a href="#" class="w3-bar-item w3-button">One new friend request</a>
-                <a href="#" class="w3-bar-item w3-button">John Doe posted on your wall</a>
-                <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
-            </div>
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="../index.html" class="w3-button w3-block w3-black w3-hover-steel">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="about.html" class="w3-button w3-block w3-black w3-hover-steel">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black w3-hover-steel">OFFICERS</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="contact.html" class="w3-button w3-block w3-black w3-hover-steel">SOCIAL MEDIA</a>
+    </div>
+  </div>
+</div>
+
+
+ <!-- MENU AREA -->
+
+
+
+<!-- Header with image -->
+<header class="default w3-display-container w3-grayscale-min" id="test">
+    <div class="w3-display-middle w3-center">
+        <span class="w3-text-white" style="font-size:90px">DUKL<br>Officers</span>
+    </div>
+    </header>
+
+    <!-- Add a background color and large text to the whole page -->
+    <div class="w3-show-inline-block" style="width: 100%; background-color: rgb(108, 121, 121); padding-left: 20%; padding-top: 4%; padding-bottom: 2%;" >
+        <div   class="w3-grayscale w3-large w3-bar" >
+
+            <a href="#allison"><button class="kave-btn w3-hover-steel" style="background-color: rgb(71, 78, 78);">
+                <span class="kave-line"></span>
+                Allison
+            </button>
+            <a href="#bailey"><button class="kave-btn w3-hover-steel" style="background-color: rgb(71, 78, 78);">
+                <span class="kave-line"></span>
+                Bailey
+            </button></a>
+            <a href="#ben"><button class="kave-btn w3-hover-steel" style="background-color: rgb(71, 78, 78);">
+                <span class="kave-line"></span>
+                Ben
+            </button></a>
         </div>
     </div>
+
+    <!-- Add a background color and large text to the whole page -->
+    <div class="w3-show-inline-block" style="width: 100%; background-color: rgb(108, 121, 121); padding-left: 20%; padding-top: 2%; padding-bottom: 4%;" >
+        <div   class="w3-grayscale w3-large w3-bar" >
+
+            <a href="#lauren"><button class="kave-btn w3-hover-steel" style="background-color: rgb(71, 78, 78);">
+                <span class="kave-line"></span>
+                Lauren
+            </button></a>
+            <a href="#rolland"><button class="kave-btn w3-hover-steel" style="background-color: rgb(71, 78, 78);">
+                <span class="kave-line"></span>
+                Rolland
+            </button></a>
+            <a href="#sushi"><button class="kave-btn w3-hover-steel" style="background-color: rgb(71, 78, 78);">
+                <span class="kave-line"></span>
+                Sushi
+            </button></a>
+        </div>
+    </div>
+
+    <!-- End page content -->
 </div>
 
-<div class="topnav">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-</div>
+  <!-- ALLISON -->
 
-<div class="content">
-  <h2>CSS Template</h2>
-  <p>A topnav, content and a footer.</p>
-</div>
 
-<div class="footer">
-  <p>Footer</p>
-</div>
+
+<!-- Header with image -->
+<header class="high w3-display-container w3-grayscale-min" id="allison">
+    <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+      <span class="w3-tag">Portal 2</span>
+    </div>
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-white" style="font-size:90px">Allison<br>{HighAwesomeness}</span>
+    </div>
+    <div class="w3-display-bottomright w3-center w3-padding-large">
+      <span class="w3-text-white">Bard</span>
+    </div>
+  </header>
+  
+  <!-- Add a background color and large text to the whole page -->
+  <div class="w3-sand w3-grayscale w3-large">
+  
+  <!-- About Container -->
+  <div class="w3-container background-spec" id="allisonlow">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT ALLISON</span></h5>
+      <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>The diplomat of the group, Allison is always ready to have have some fun, bop to some tunes, and smash some face in.</p>
+      <div class="w3-panel w3-leftbar w3-dark-grey">
+        <p><i>"Maybe you would give me Salmonella...if I ate you raw."</i></p>
+        <p>Allison Being A Menace To Society.</p>
+      </div>
+      <img src="../images/myst.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+      <p><strong>Main Games:</strong> Minecraft, Hunie Pop.</p>
+      <p><strong>Time Zone:</strong> US East</p>
+    </div>
+  </div>
+  
+  <!-- End page content -->
+  </div>
+
+
+
+  <!-- BAILEY -->
+
+
+
+  <!-- Header with image -->
+<header class="bail w3-display-container w3-grayscale-min" id="bailey">
+    <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+      <span class="w3-tag">Call of Duty</span>
+    </div>
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-white" style="font-size:90px">Bailey<br>{Beldroth}</span>
+    </div>
+    <div class="w3-display-bottomright w3-center w3-padding-large">
+      <span class="w3-text-white">Rogue</span>
+    </div>
+  </header>
+  
+  <!-- Add a background color and large text to the whole page -->
+  <div class="w3-sand w3-grayscale w3-large">
+  
+  <!-- About Container -->
+  <div class="w3-container background-spec" id="baileylow">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT BAILEY</span></h5>
+      <p>Bailey, or Beldroth, is small yet mighty. A terror in CoD, he shreds his opponents with ease before moving on as quickly as he arrived.</p>
+      <p>Being the only officer over seas, Bailey is always ready to strike when you least expect it. </p>
+      <div class="w3-panel w3-leftbar w3-dark-grey">
+        <p><i>Allison: *spying on Bailey from behind a pillar*</i></p>
+        <p><i>Bailey: *teleports across the map right up into her face*</i></p>
+        <p><i>Allison: *screams in terror*</i></p>
+        <p><i>Bailey: "You like my banner? :}"</i></p>
+        <p>Bailey Wielding A Beautiful Banner</p>
+      </div>
+      <img src="../images/myst.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+      <p><strong>Main Games:</strong> Minecraft, Call of Duty, Genital Jousting.</p>
+      <p><strong>Time Zone:</strong>CET</p>
+    </div>
+  </div>
+  
+  <!-- End page content -->
+  </div>
+  
+
+
+<!-- ELVENAR -->
+
+
+
+<!-- Header with image -->
+<header class="elvenar w3-display-container w3-grayscale-min" id="ben">
+    <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+      <span class="w3-tag">Skyrim</span>
+    </div>
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-white" style="font-size:90px">Ben<br>{Elvenar}</span>
+    </div>
+    <div class="w3-display-bottomright w3-center w3-padding-large">
+      <span class="w3-text-white">Ranger</span>
+    </div>
+  </header>
+  
+  
+  <!-- Add a background color and large text to the whole page -->
+  <div class="w3-sand w3-grayscale w3-large">
+  
+  <!-- About Container -->
+  <div class="w3-container background-spec" id="benlow">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT BEN</span></h5>
+      <p>Ben, AKA Elvenar, .</p>
+      <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
+      <div class="w3-panel w3-leftbar w3-dark-grey">
+        <p><i>Ben: "Our trikes had sex."</i></p>
+        <p><i>Allison: "What the fuck?"</i></p>
+        <p><i>Ben: "There is an egg."</i></p>
+        <p><i>Allison: "Uh. Uhhhhhh."</i></p>
+        <p><i>Ben: "I offer joint custody."</i></p>
+        <p><i>Allison: "I..."</i></p>
+        <p><i>Ben: "Jk, Imma eat it."</i></p>
+        <p><i>Allison: "NO, DON'T!!!"</i></p>
+        <p>Ben After Having An Omlette</p>
+      </div>
+      <img src="../images/myst.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+      <p><strong>Main Games:</strong> Minecraft, Total War: Warhammer 2, Phasmophobia.</p>
+      <p><strong>Time Zone:</strong> US Pacific</p>
+    </div>
+  </div>
+  
+  <!-- End page content -->
+  </div>
+
+
+  
+  <!-- LAUREN -->
+
+
+
+  <!-- Header with image -->
+<header class="rennn w3-display-container w3-grayscale-min" id="lauren">
+    <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+      <span class="w3-tag">Starcraft 2</span>
+    </div>
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-white" style="font-size:90px">Lauren<br>{Rennn}</span>
+    </div>
+    <div class="w3-display-bottomright w3-center w3-padding-large">
+      <span class="w3-text-white">Fighter</span>
+    </div>
+  </header>
+  
+  <!-- Add a background color and large text to the whole page -->
+  <div class="w3-sand w3-grayscale w3-large">
+  
+  <!-- About Container -->
+  <div class="w3-container background-spec" id="laurenlow">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT LAUREN</span></h5>
+      <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
+      <div class="w3-panel w3-leftbar w3-dark-grey">
+        <p><i>"As long as I get food, I do not care."</i></p>
+        <p>Lauren Being Done With The World.</p>
+      </div>
+      <img src="../images/myst.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+      <p><strong>Main Games:</strong> Minecraft, Planetary Annihilation, StarCraft 2, Old Lady Games.</p>
+      <p><strong>Time Zone:</strong> US East</p>
+    </div>
+  </div>
+  
+  <!-- End page content -->
+  </div>
+
+
+
+  <!-- ROLLAND -->
+
+
+
+  <!-- Header with image -->
+  <header class="roll w3-display-container w3-grayscale-min" id="rolland">
+    <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+      <span class="w3-tag">World of Warcraft</span>
+    </div>
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-white" style="font-size:90px">Rolland<br>{Zeldor}</span>
+    </div>
+    <div class="w3-display-bottomright w3-center w3-padding-large">
+      <span class="w3-text-white">Warlock</span>
+    </div>
+  </header>
+  
+  <!-- Add a background color and large text to the whole page -->
+  <div class="w3-sand w3-grayscale w3-large">
+  
+  <!-- About Container -->
+  <div class="w3-container background-spec" id="rollandlow">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT ROLLAND</span></h5>
+      <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
+      <div class="w3-panel w3-leftbar w3-dark-grey">
+        <p><i>Ben: "WHO?!?"</i></p>
+        <p><i>Allison: "Why did you say who? It was a demon."</i></p>
+        <p><i>Rolland: "Are you saying demons don't have genders???"</i></p>
+        <p>Rolland Asking A Very Good Question During A Hunt.</p>
+      </div>
+      <img src="../images/myst.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+      <p><strong>Main Games:</strong> Minecraft, World of Warcraft, So Many Fucking Mobile/Crappy Games.</p>
+      <p><strong>Time Zone:</strong> US Central</p>
+    </div>
+  </div>
+  
+  <!-- End page content -->
+  </div>
+
+
+
+<!-- SUSHI -->
+
+
+
+  <!-- Header with image -->
+<header class="sushi w3-display-container w3-grayscale-min" id="sushi">
+    <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+      <span class="w3-tag">War Thunder</span>
+    </div>
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-white" style="font-size:90px">Sushi<br>{Sushi}</span>
+    </div>
+    <div class="w3-display-bottomright w3-center w3-padding-large">
+      <span class="w3-text-white">Druid</span>
+    </div>
+  </header>
+  
+  <!-- Add a background color and large text to the whole page -->
+  <div class="w3-sand w3-grayscale w3-large">
+  
+  <!-- About Container -->
+  <div class="w3-container background-spec" id="sushilow">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT SUSHI</span></h5>
+      <p> Simply known as Sushi, this man is the newest officer to the guild yet has managed to stay on throughout several tumultuous periods for the guild. This tenacity is matched in his gameplay as he pulls withering assaults all the while never forgetting those who wronged him.</p>
+      <p> A man of the country, Sushi is in tune with his natural side while still fostering a love for cars and guns. His tough exterior hides a soft side to his friends and respected guildmates. </p>
+      <div class="w3-panel w3-leftbar w3-dark-grey">
+        <p><i>"Epic edgy gamer quote about edge lord things.".</i></p>
+        <p>Certified Bad Ass, Coffeeist and Owner: Liam Brown</p>
+      </div>
+      <img src="../images/myst.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+      <p><strong>Main Games:</strong> Minecraft, Call of Duty, Rainbow Six Siege, War Thunder.</p>
+      <p><strong>Time Zone:</strong> US East</p>
+    </div>
+  </div>
+  
+  <!-- End page content -->
+  </div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-dark-grey w3-padding-48 w3-large">
+  <p>Powered by the Blood of our Enemies</a></p>
+</footer>
 
 </body>
 </html>
-
