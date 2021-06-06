@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>DUKL Homepage</title>
+<title>About DUKL</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -20,6 +20,14 @@ body, html {
 
 .menu {
   display: none;
+}
+
+.background-spec {
+    background-color: rgb(108, 121, 121);
+}
+
+.game-back{
+  background-color: dimgray;
 }
 </style>
 <body>
@@ -45,13 +53,13 @@ body, html {
 <!-- Header with image -->
 <header class="bgimg w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
-    <span class="w3-tag">Open from 6am to 5pm</span>
+    <span class="w3-tag">When you want DUKL</span>
   </div>
   <div class="w3-display-middle w3-center">
     <span class="w3-text-white" style="font-size:90px">ABOUT<br>DUKL</span>
   </div>
   <div class="w3-display-bottomright w3-center w3-padding-large">
-    <span class="w3-text-white">15 Adr street, 5015</span>
+    <span class="w3-text-white">You go to DUKL</span>
   </div>
 </header>
 
@@ -59,88 +67,86 @@ body, html {
 <div class="w3-sand w3-grayscale w3-large">
 
 <!-- About Container -->
-<div class="w3-container" id="about">
+<div class="w3-container background-spec" id="about">
   <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE CAFE</span></h5>
-    <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
-    <div class="w3-panel w3-leftbar w3-light-grey">
-      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
-      <p>Chef, Coffeeist and Owner: Liam Brown</p>
-    </div>
-    <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
-    <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
-    <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE DUKL</span></h5>
+    <p>
+      DUKL is a group of gamers who have, and still do, play various video games together. While never having picked a specific game to focus on, Minecraft is the longest running (on and off) game the group has played.
+      Numerous other games and activities have been taken up by the group over the years, however, many of which can be found below.
+    </p>
+    <p>Several members of DUKL actively stream and have made a few videos. Outside of video games, the group likes to relax and hang out with each other and have had some interesting times together. </p>
   </div>
 </div>
 
 <!-- Menu Container -->
-<div class="w3-container" id="menu">
+<div class="w3-container background-spec " id="games">
   <div class="w3-content" style="max-width:700px">
  
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">GAMES PLAYED</span></h5>
   
-    <div class="w3-row w3-center w3-card w3-padding">
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
-        <div class="w3-col s6 tablink">Eat</div>
+    <div class="w3-row w3-center w3-card w3-padding game-back">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Group');" id="myLink">
+        <div class="w3-col s6 tablink">Group</div>
       </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
-        <div class="w3-col s6 tablink">Drink</div>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Individual');">
+        <div class="w3-col s6 tablink">Individual</div>
       </a>
     </div>
 
-    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
-      <h5>Bread Basket</h5>
-      <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+    <div id="Group" class="w3-container menu w3-padding-48 w3-card game-back">
+      <h5><b>Minecraft</b></h5>
+      <p class="w3-text-black">The OG DUKL videogame, DUKL has passed through numerous faction and minigame servers over the years.</p><br>
+
+      <h5><b>Call of Duty</b><h5>
+      <p class="w3-text-black">Intense rounds of Zombies and Multiplayer have become staple game modes for DUKL.</p><br>
     
-      <h5>Honey Almond Granola with Fruits</h5>
-      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
+      <h5><b>Tabletop Simulator & Uno</b></h5>
+      <p class="w3-text-black">Both similar games to play as the party is dying down or when some chill board/card games are desired.</p><br>
     
-      <h5>Belgian Waffle</h5>
-      <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
+      <h5><b>Jackbox & Party Games</b></h5>
+      <p class="w3-text-black">DUKL dabbles in an assortment of party games such as Scribbl.io, Jackbox, Cards Against Humanity, Codename, Gartic Phone, etc depending on the mood.</p><br>
+
+      <h5><b>Brawhalla</b></h5>
+      <p class="w3-text-black">A 2D cartoon fighting game a few members of the group have gotten quite profficient in spreading fear and panic amongst the rest.</p><br>
     
-      <h5>Scrambled eggs</h5>
-      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
-    
-      <h5>Blueberry Pancakes</h5>
-      <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
+      <h5><b>Terraria</b></h5>
+      <p class="w3-text-black">While having died down in recent years, DUKL has gone through various playthroughs in its time and eagerly awaits the update of modloader.</p><br>
+
+      <h5><b>Fortnite</b></h5>
+      <p class="w3-text-black">Not too popular in recent times, as CoD has taken its place, Fortnite was a nice quick FPS for DUKL.</p>
     </div>
 
-    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
-      <h5>Coffee</h5>
-      <p class="w3-text-grey">Regular coffee 2.50</p><br>
+    <div id="Individual" class="w3-container menu w3-padding-48 w3-card game-back">
+      <h5><b>Starcraft 2 - Lauren/Rolland</b></h5>
+      <p class="w3-text-black">A real time strategy game, Starcraft 2 has pop up several times over the years providing hours of fun.</p><br>
     
-      <h5>Chocolato</h5>
-      <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
+      <h5><b>Ark Survival Evolved - Ben/Rolland</b></h5>
+      <p class="w3-text-black">Playing on a private server, DUKL has racked up some experience with the game, with several members looking to get back into it.</p><br>
     
-      <h5>Corretto</h5>
-      <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
+      <h5><b>Phasmophobia - Ben/Allison</b></h5>
+      <p class="w3-text-black">While interst recently has waned due to somewhat repetative gameplay, a few members keep an eye out for future maps or updates.</p><br>
     
-      <h5>Iced tea</h5>
-      <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
+      <h5><b>Total War: Warhammer 2 - Ben</b></h5>
+      <p class="w3-text-black">A fan of nearly all Total War games, an empire building turn based strategy game for when conquest is on Ben's mind.</p><br>
     
-      <h5>Soda</h5>
-      <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
+      <h5><b>Hunie Pop - Allison/Ben/Sushi</b></h5>
+      <p class="w3-text-black">A...unique game. Lots of plot with a surprisingly fun puzzle mixed in makes this a fun game to 'relax' to.</p><br>
+
+      <h5><b>House Flipper - Allison/Lauren</b></h5>
+      <p class="w3-text-black">An entertaining singleplayer game to stream if you're in the mood to design, renovate, or model houses.</p>
     </div>  
-    <img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+    <img src="../images/homebackground.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
   </div>
 </div>
 
 <!-- Contact/Area Container -->
-<div class="w3-container" id="where" style="padding-bottom:32px;">
+<div class="w3-container background-spec" id="where" style="padding-bottom:32px;">
   <div class="w3-content" style="max-width:700px">
-    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
-    <p>Find us at some address at some place.</p>
-    <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
-    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
-    <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
-      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
-    </form>
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHEN DO WE PLAY?</span></h5>
+    <p>Given most of DUKL's members are in the US East time zone, most games are played in the afternoon, evening, and night hours of the US East.</p>
+    <img src="../images/vibe.jpg" style="width:100%">
+    <p><span class="w3-tag">EXACT!</span> While the time the group plays varies based on work and/or school schedules, most often things will hit off at around 5PM EST (9PM GMT) and start filtering off at around midnight EST (4AM GMT).</p>
+    <p><strong>Feel free</strong> to message us at anytime if you need something, however, (links and contact info can be found in the 'Social Media' tab) as there is often someone awake 24/7 given time zones.</p>
   </div>
 </div>
 
@@ -148,8 +154,8 @@ body, html {
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+<footer class="w3-center w3-dark-grey  w3-padding-48 w3-large">
+  <p>Powered by the Blood of our Enemies</a></p>
 </footer>
 
 <script>
